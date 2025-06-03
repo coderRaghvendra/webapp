@@ -28,6 +28,8 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<spring.data.arango.version>3.3.0</spring.data.arango.version>
+		<arangodb.version>6.12.1</arangodb.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -44,9 +46,26 @@
 		</dependency>
 		<dependency>
 			<groupId>com.arangodb</groupId>
-			<artifactId>arangodb-spring-boot-starter</artifactId>
-			<version>1.0.0</version>
+			<artifactId>arangodb-spring-data</artifactId>
+			<version>${spring.data.arango.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.arangodb</groupId>
+					<artifactId>arangodb-java-driver</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>com.arangodb</groupId>
+			<artifactId>arangodb-java-driver</artifactId>
+			<version>${arangodb.version}</version>
+		</dependency>
+		<!-- Spring Data Commons 2.4.6 -->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.data</groupId>-->
+<!--			<artifactId>spring-data-commons</artifactId>-->
+<!--			<version>2.4.6</version>-->
+<!--		</dependency>-->
 
 
 		<dependency>
