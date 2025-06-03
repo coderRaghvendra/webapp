@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_DB: myappdb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  mongodb:
+    image: mongo:6
+    container_name: mongo_container
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: mymongodb
+
+  arangodb:
+    image: arangodb:3.11
+    environment:
+      ARANGO_ROOT_PASSWORD: myarangopassword
+    ports:
+      - "8529:8529"
+    volumes:
+      - arangodata:/var/lib/arangodb3
+      - arangodbscripts:/var/lib/arangodb3-apps
+volumes:
+  pgdata:
+  mongodata:
+  arangodata:
+  arangodbscripts:
