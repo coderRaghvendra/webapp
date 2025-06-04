@@ -32,10 +32,18 @@
 		<arangodb.version>6.12.1</arangodb.version>
 	</properties>
 	<dependencies>
+        <!-- for sql and postgres -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- for mongodb -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -44,22 +52,24 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!-- for arangodb -->
 		<dependency>
 			<groupId>com.arangodb</groupId>
 			<artifactId>arangodb-spring-data</artifactId>
 			<version>${spring.data.arango.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.arangodb</groupId>
-					<artifactId>arangodb-java-driver</artifactId>
-				</exclusion>
-			</exclusions>
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>com.arangodb</groupId>-->
+<!--					<artifactId>arangodb-java-driver</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
 		</dependency>
-		<dependency>
-			<groupId>com.arangodb</groupId>
-			<artifactId>arangodb-java-driver</artifactId>
-			<version>${arangodb.version}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.arangodb</groupId>-->
+<!--			<artifactId>arangodb-java-driver</artifactId>-->
+<!--			<version>${arangodb.version}</version>-->
+<!--		</dependency>-->
 		<!-- Spring Data Commons 2.4.6 -->
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.data</groupId>-->
@@ -68,11 +78,6 @@
 <!--		</dependency>-->
 
 
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

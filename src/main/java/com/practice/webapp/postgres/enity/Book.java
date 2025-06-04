@@ -1,4 +1,4 @@
-package com.practice.webapp.learn1.enity;
+package com.practice.webapp.postgres.enity;
 
 import jakarta.persistence.*;
 import lombok.*;

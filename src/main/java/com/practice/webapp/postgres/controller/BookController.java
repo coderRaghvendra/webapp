@@ -1,7 +1,7 @@
-package com.practice.webapp.learn1.controller;
+package com.practice.webapp.postgres.controller;
 
-import com.practice.webapp.learn1.enity.Book;
-import com.practice.webapp.learn1.service.BookService;
+import com.practice.webapp.postgres.enity.Book;
+import com.practice.webapp.postgres.service.BookService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

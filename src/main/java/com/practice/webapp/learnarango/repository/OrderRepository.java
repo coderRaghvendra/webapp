@@ -5,6 +5,8 @@ import com.practice.webapp.learnarango.entity.Order;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrderRepository extends ArangoRepository<Order, String> {
+public interface OrderRepository
+//    extends ArangoRepository<Order, String>
+{
 }
 

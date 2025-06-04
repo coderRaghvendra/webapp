@@ -1,7 +1,7 @@
-package com.practice.webapp.learn1.service;
+package com.practice.webapp.postgres.service;
 
-import com.practice.webapp.learn1.enity.Book;
-import com.practice.webapp.learn1.repository.BookRepository;
+import com.practice.webapp.postgres.enity.Book;
+import com.practice.webapp.postgres.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
