@@ -1,7 +1,7 @@
-package com.practice.webapp.learnmongo.controller;
+package com.practice.webapp.mongo.controller;
 
-import com.practice.webapp.learnmongo.entity.Customer;
-import com.practice.webapp.learnmongo.service.CustomerService;
+import com.practice.webapp.mongo.entity.Customer;
+import com.practice.webapp.mongo.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

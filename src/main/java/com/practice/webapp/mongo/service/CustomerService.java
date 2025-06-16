@@ -1,7 +1,7 @@
-package com.practice.webapp.learnmongo.service;
+package com.practice.webapp.mongo.service;
 
-import com.practice.webapp.learnmongo.entity.Customer;
-import com.practice.webapp.learnmongo.repository.CustomerRepository;
+import com.practice.webapp.mongo.entity.Customer;
+import com.practice.webapp.mongo.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -53,30 +53,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- for arangodb -->
-		<dependency>
-			<groupId>com.arangodb</groupId>
-			<artifactId>arangodb-spring-data</artifactId>
-			<version>${spring.data.arango.version}</version>
-<!--			<exclusions>-->
-<!--				<exclusion>-->
-<!--					<groupId>com.arangodb</groupId>-->
-<!--					<artifactId>arangodb-java-driver</artifactId>-->
-<!--				</exclusion>-->
-<!--			</exclusions>-->
-		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>com.arangodb</groupId>-->
-<!--			<artifactId>arangodb-java-driver</artifactId>-->
-<!--			<version>${arangodb.version}</version>-->
-<!--		</dependency>-->
-		<!-- Spring Data Commons 2.4.6 -->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.data</groupId>-->
-<!--			<artifactId>spring-data-commons</artifactId>-->
-<!--			<version>2.4.6</version>-->
-<!--		</dependency>-->
-
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>

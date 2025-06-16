@@ -1,11 +1,10 @@
-package com.practice.webapp.learnmongo.service;
+package com.practice.webapp.mongo.service;
 
-import com.practice.webapp.learnmongo.entity.Follow;
-import com.practice.webapp.learnmongo.repository.FollowRepository;
+import com.practice.webapp.mongo.entity.Follow;
+import com.practice.webapp.mongo.repository.FollowRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -24,11 +23,20 @@ public class FollowService {
 
     public Follow save(Follow follow) {
         try {
-            follow.setCreatedAt(LocalDateTime.of(2024, 1, 5, 5, 30, 0)); // Set a specific date for testing
-            Follow f = repo.save(follow);
-            System.out.println("Follow saved: " + f.getUserId());
-            System.out.println("Follow saved: " + f.getProfileId());
-            return f;
+            return repo.save(follow);
+        } catch (Exception e) {
+            System.out.println("Error saving follow: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    public Follow update(String id, String newProfileId) {
+
+
+        try {
+            Follow follow = repo.findById(id).orElseThrow(() -> new RuntimeException("Follow not found with id: " + id));
+            follow.setProfileId(newProfileId);
+            return repo.save(follow);
         } catch (Exception e) {
             System.out.println("Error saving follow: " + e.getMessage());
             throw e;

@@ -1,11 +1,12 @@
-package com.practice.webapp.learnmongo.entity;
+package com.practice.webapp.mongo.entity;
 
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
 @Data
@@ -17,6 +18,10 @@ public class Follow {
 
     private String userId;
     private String profileId;
-    private LocalDateTime createdAt = LocalDateTime.now(ZoneId.of("UTC"));
-    private ZonedDateTime updatedAt = ZonedDateTime.now();
+
+    @CreatedDate
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    private ZonedDateTime updatedAt;
 }
